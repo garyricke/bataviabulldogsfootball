@@ -238,9 +238,9 @@ section { position: relative; }
    ============================================================ */
 .hero {
   position: relative; color: var(--paper); overflow: hidden; isolation: isolate;
-  background:
-    radial-gradient(90% 120% at 75% 0%, rgba(166,25,46,.55), transparent 60%),
-    linear-gradient(155deg, #241015 0%, var(--crimson-ink) 45%, var(--black) 100%);
+  background-color: var(--crimson-ink);
+  background-image: url('https://res.cloudinary.com/dsbllwpbh/image/upload/f_auto,q_auto,w_2000/bhsfootball26/bhsfootball26/hero-tiny-planet');
+  background-size: cover; background-position: center; background-repeat: no-repeat;
 }
 /* looping background video */
 .hero__video {
