@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case Study — Hager Excavating · Bulldog Audience Builder</title>
+<meta name="description" content="See the before & after: how the Bulldog Audience Builder package transformed Hager Excavating's logo, ad, website and brand photography.">
+<link rel="icon" href="https://res.cloudinary.com/dsbllwpbh/image/upload/bhsfootball26/bhsfootball26/favicon-bhsfootball.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;1,500&family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#15110e; --charcoal:#211d1a; --cream:#F4EEE2; --paper:#ECE3D3; --paper-2:#E5DBC8;
+  --gold:#F4C20D; --gold-bright:#FFD41F; --red:#C0322B; --red-deep:#9C2620;
+  --muted:#6c645b; --line:rgba(33,29,26,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Barlow',system-ui,sans-serif;color:var(--ink);background:var(--cream);
+  -webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden;}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+.wrap{width:min(92vw,1140px);margin-inline:auto;}
+.eyebrow{font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+  letter-spacing:.24em;font-size:.82rem;color:var(--gold);}
+
+.btn{display:inline-flex;align-items:center;gap:.5em;font-family:'Oswald',sans-serif;font-weight:600;
+  text-transform:uppercase;letter-spacing:.06em;font-size:.95rem;padding:.85em 1.5em;border-radius:6px;
+  transition:transform .18s,background .18s,box-shadow .18s;cursor:pointer;border:0;}
+.btn--gold{background:var(--gold);color:var(--ink);}
+.btn--gold:hover{background:var(--gold-bright);transform:translateY(-2px);}
+.btn--ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5);}
+.btn--ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);transform:translateY(-2px);}
+.btn--red{background:var(--red);color:#fff;}
+.btn--red:hover{background:var(--red-deep);transform:translateY(-2px);}
+
+/* top bar */
+.bar{position:sticky;top:0;z-index:40;background:rgba(21,17,14,.92);backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(244,194,13,.22);}
+.bar__in{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:12px 0;}
+.bar__brand{display:flex;align-items:center;gap:.6rem;color:#fff;font-family:'Oswald',sans-serif;
+  font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:.95rem;}
+.bar__brand img{height:30px;}
+.bar__brand span{color:var(--gold);font-size:.6rem;letter-spacing:.18em;border-left:1px solid rgba(255,255,255,.25);padding-left:.55rem;}
+.bar__back{color:rgba(255,255,255,.8);font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;}
+.bar__back:hover{color:#fff;}
+
+/* hero */
+.hero{background:var(--ink);color:#fff;padding:clamp(3.5rem,8vw,6rem) 0;position:relative;overflow:hidden;}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 100% 0%,rgba(244,194,13,.12),transparent 55%);}
+.hero__in{position:relative;max-width:760px;}
+.hero h1{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;line-height:.98;
+  font-size:clamp(2.3rem,5.6vw,4rem);margin:.7rem 0 1.1rem;}
+.hero h1 .red{color:var(--red);}
+.hero p{font-size:clamp(1.05rem,1.6vw,1.25rem);color:rgba(255,255,255,.85);max-width:60ch;}
+.hero__cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem;}
+.hero__meta{display:flex;flex-wrap:wrap;gap:1.6rem;margin-top:2.4rem;padding-top:1.8rem;border-top:1px solid rgba(255,255,255,.16);}
+.hero__meta div{}
+.hero__meta b{display:block;font-family:'Oswald',sans-serif;font-size:1.5rem;color:var(--gold-bright);line-height:1;}
+.hero__meta span{font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+  letter-spacing:.1em;font-size:.72rem;color:rgba(255,255,255,.6);}
+
+/* intro */
+.intro{padding:clamp(2.5rem,5vw,4rem) 0 0;}
+.intro p{font-size:1.15rem;line-height:1.6;max-width:74ch;color:#3c3731;}
+.intro strong{color:var(--ink);}
+
+/* before/after block */
+.block{padding:clamp(2.6rem,6vw,4.4rem) 0;}
+.block__head{margin-bottom:1.8rem;}
+.block__num{font-family:'Oswald',sans-serif;font-weight:700;color:var(--red);font-size:1rem;letter-spacing:.1em;}
+.block__title{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;
+  font-size:clamp(1.7rem,3.4vw,2.4rem);line-height:1.02;margin:.25rem 0 .4rem;}
+.block__desc{color:var(--muted);max-width:60ch;}
+.block__link{display:inline-block;margin-top:1.4rem;font-family:'Barlow Semi Condensed',sans-serif;
+  font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;color:var(--red);}
+.block__link:hover{color:var(--red-deep);}
+
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,3vw,2rem);align-items:start;}
+@media(max-width:720px){.ba{grid-template-columns:1fr;}}
+.ba__card{position:relative;background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--line);
+  box-shadow:0 18px 40px -24px rgba(0,0,0,.5);}
+.ba__card--after{border-color:rgba(244,194,13,.55);box-shadow:0 22px 50px -20px rgba(244,194,13,.4),0 18px 40px -24px rgba(0,0,0,.5);}
+.ba__tag{position:absolute;top:12px;left:12px;z-index:2;font-family:'Barlow Semi Condensed',sans-serif;
+  font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.68rem;padding:5px 12px;border-radius:20px;}
+.ba__tag--before{background:#3a332e;color:#cdc5ba;}
+.ba__tag--after{background:var(--gold);color:var(--ink);}
+.ba__media{background:var(--paper);}
+.ba__media img{width:100%;display:block;}
+.ba--logo .ba__media{background:#fff;display:flex;align-items:center;justify-content:center;padding:30px;min-height:260px;}
+.ba--logo .ba__media img{max-width:74%;width:auto;max-height:260px;}
+.ba--site .ba__media{max-height:560px;overflow:hidden;position:relative;}
+.ba--site .ba__media img{width:100%;object-fit:cover;object-position:top;}
+.ba--site .ba__media::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;
+  background:linear-gradient(0deg,#fff,transparent);}
+.ba__cap{padding:13px 16px;font-size:.88rem;color:var(--muted);background:#fff;}
+.ba__cap b{color:var(--ink);font-weight:600;}
+
+/* gallery (imagery) */
+.gallery-label{font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+  letter-spacing:.12em;font-size:.85rem;margin:1.6rem 0 1rem;display:flex;align-items:center;gap:.7rem;}
+.gallery-label .dot{width:9px;height:9px;border-radius:50%;}
+.gallery-label .dot--before{background:#3a332e;}
+.gallery-label .dot--after{background:var(--gold);}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+@media(max-width:760px){.grid-4{grid-template-columns:repeat(2,1fr);}.grid-3{grid-template-columns:1fr;}}
+.shot{border-radius:11px;overflow:hidden;border:1px solid var(--line);box-shadow:0 12px 28px -18px rgba(0,0,0,.5);}
+.shot--after{border-color:rgba(244,194,13,.45);}
+.shot img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;}
+
+/* CTA */
+.cta{background:var(--ink);color:#fff;border-top:4px solid var(--gold);margin-top:clamp(2.5rem,6vw,4rem);
+  padding:clamp(3rem,7vw,5rem) 0;text-align:center;}
+.cta h2{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;
+  font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.02;margin-bottom:1rem;}
+.cta p{color:rgba(255,255,255,.82);max-width:56ch;margin:0 auto 1.4rem;font-size:1.08rem;}
+.cta__includes{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin:0 auto 2rem;max-width:760px;}
+.cta__includes span{font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+  letter-spacing:.06em;font-size:.78rem;color:#ece3d3;border:1px solid rgba(244,194,13,.35);
+  border-radius:20px;padding:7px 14px;}
+.cta__btns{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;}
+.cta__price{font-family:'Oswald',sans-serif;color:var(--gold-bright);font-size:1.1rem;margin-top:1.4rem;}
+
+/* footer */
+.foot{background:#100d0b;color:rgba(255,255,255,.55);padding:26px 0;font-size:.82rem;}
+.foot__in{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center;}
+.foot a{color:var(--gold);}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s;}
+.reveal.in{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;}html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+  <!-- top bar -->
+  <header class="bar">
+    <div class="wrap bar__in">
+      <a class="bar__brand" href="../../index.html#sponsorship">
+        <img src="https://res.cloudinary.com/dsbllwpbh/image/upload/f_png,q_auto,w_120/bhsfootball26/bhsfootball26/batavia-logo" alt="Batavia Bulldogs Football">
+        <span>Audience Builder · Case Study</span>
+      </a>
+      <a class="bar__back" href="../../index.html#sponsorship">&larr; Back to Sponsorship</a>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <section class="hero">
+    <div class="wrap hero__in">
+      <p class="eyebrow">Bulldog Audience Builder · Real Results</p>
+      <h1>Hager Excavating:<br>A Total Brand <span class="red">Transformation</span></h1>
+      <p>A family-owned excavator that&rsquo;s moved Chicagoland&rsquo;s ground since 1946 — re-introduced to the community with a new logo, a premium ad, a custom website, and rebuilt brand photography. Here&rsquo;s the before &amp; after.</p>
+      <div class="hero__cta">
+        <a class="btn btn--gold" href="../../hager/index.html" target="_blank">See the live landing page &rarr;</a>
+        <a class="btn btn--ghost" href="../../hager-ad.html" target="_blank">View the print ad &rarr;</a>
+      </div>
+      <div class="hero__meta">
+        <div><b>Logo</b><span>Redrawn</span></div>
+        <div><b>Ad</b><span>Redesigned</span></div>
+        <div><b>Website</b><span>Rebuilt</span></div>
+        <div><b>Photography</b><span>Re-shot</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+
+    <div class="intro reveal">
+      <p>When <strong>Hager Excavating</strong> became a Bulldog Audience Builder, they had decades of credibility but a brand that didn&rsquo;t show it — a clip-art ad, a dated website, and snapshots from the yard. We rebuilt the whole presentation from the ground up. <strong>Same family, same iron — a brand that finally matches the work.</strong></p>
+    </div>
+
+    <!-- 01 LOGO -->
+    <section class="block reveal">
+      <div class="block__head">
+        <div class="block__num">01 — Identity</div>
+        <h2 class="block__title">The Logo</h2>
+        <p class="block__desc">We refined their existing badge into a crisp, vector-perfect mark — same heritage, deeper color and razor-sharp at any size, ready for the web, a truck door, or a hard hat.</p>
+      </div>
+      <div class="ba ba--logo">
+        <div class="ba__card">
+          <span class="ba__tag ba__tag--before">Before</span>
+          <div class="ba__media"><img src="https://res.cloudinary.com/dsbllwpbh/image/upload/f_auto,q_auto,w_700/bhsfootball26/bhsfootball26/cs-old-logo" alt="Hager Excavating existing badge logo"></div>
+          <div class="ba__cap">Their existing badge — muted &amp; low-resolution.</div>
+        </div>
+        <div class="ba__card ba__card--after">
+          <span class="ba__tag ba__tag--after">After</span>
+          <div class="ba__media"><img src="https://res.cloudinary.com/dsbllwpbh/image/upload/bhsfootball26/bhsfootball26/hager-badge-svg.svg" alt="Hager Excavating redrawn badge logo"></div>
+          <div class="ba__cap"><b>Redrawn badge</b> — &ldquo;Since 1946,&rdquo; vector-crisp at any size.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 AD -->
+    <section class="block reveal">
+      <div class="block__head">
+        <div class="block__num">02 — Print</div>
+        <h2 class="block__title">The Story of the Season Ad</h2>
+        <p class="block__desc">The standard ad does the job. The Audience Builder ad <em>sells</em> — a cinematic hero, a real headline, a clean offer, and a QR code that bridges print to web.</p>
+      </div>
+      <div class="ba">
+        <div class="ba__card">
+          <span class="ba__tag ba__tag--before">Before</span>
+          <div class="ba__media"><img src="https://res.cloudinary.com/dsbllwpbh/image/upload/f_auto,q_auto,w_760/bhsfootball26/bhsfootball26/cs-standard-ad" alt="Standard Story of the Season ad for Hager"></div>
+          <div class="ba__cap">Standard full-page ad — logo, address, phone.</div>
+        </div>
+        <div class="ba__card ba__card--after">
+          <span class="ba__tag ba__tag--after">After</span>
+          <div class="ba__media"><img src="https://res.cloudinary.com/dsbllwpbh/image/upload/f_auto,q_auto,w_760/bhsfootball26/bhsfootball26/cs-after-ad" alt="Premium designed Audience Builder ad for Hager"></div>
+          <div class="ba__cap"><b>Premium designed ad</b> — agency creative + print-to-web QR.</div>
+        </div>
+      </div>
+      <a class="block__link" href="../../hager-ad.html" target="_blank">See the full print-ready ad &rarr;</a>
+    </section>
+
+    <!-- 03 WEBSITE -->
+    <section class="block reveal">
+      <div class="block__head">
+        <div class="block__num">03 — Web</div>
+        <h2 class="block__title">The Website</h2>
+        <p class="block__desc">From a sparse four-photo page to a complete, modern landing page — hero, services, story, service area and an estimate form. A site that out-classes most businesses&rsquo; own websites.</p>
+      </div>
+      <div class="ba ba--site">
+        <div class="ba__card">
+          <span class="ba__tag ba__tag--before">Before</span>
+          <div class="ba__media"><img src="https://res.cloudinary.com/dsbllwpbh/image/upload/f_auto,q_auto,w_900/bhsfootball26/bhsfootball26/cs-existing-site" alt="Hager Excavating existing website"></div>
+          <div class="ba__cap">Existing site — a logo, a menu, four photos.</div>
+        </div>
+        <div class="ba__card ba__card--after">
+          <span class="ba__tag ba__tag--after">After</span>
+          <div class="ba__media"><img src="https://res.cloudinary.com/dsbllwpbh/image/upload/f_auto,q_auto,w_900/bhsfootball26/bhsfootball26/cs-new-site" alt="Hager Excavating new custom landing page"></div>
+          <div class="ba__cap"><b>New custom landing page</b> — full brand presence, hosted a year.</div>
+        </div>
+      </div>
+      <a class="block__link" href="../../hager/index.html" target="_blank">Visit the live site &rarr;</a>
+    </section>
+
+    <!-- 04 IMAGERY -->
+    <section class="block reveal">
+      <div class="block__head">
+        <div class="block__num">04 — Photography</div>
+        <h2 class="block__title">The Imagery</h2>
+        <p class="block__desc">Their real Cat iron — re-shot as cinematic, golden-hour brand photography. Authentic machines, premium presentation.</p>
+      </div>
+
+      <div class="gallery-label"><span class="dot dot--before"></span>Before — original yard photos</div>
+      <div class="grid-4">
+        <div class="shot"><img src="https://res.cloudinary.com/dsbllwpbh/image/upload/f_auto,q_auto,c_fill,g_auto,ar_4:3,w_500/bhsfootball26/bhsfootball26/cs-old-equip-1" alt="Hager track loader, original photo" loading="lazy"></div>
+        <div class="shot"><img src="https://res.cloudinary.com/dsbllwpbh/image/upload/f_auto,q_auto,c_fill,g_auto,ar_4:3,w_500/bhsfootball26/bhsfootball26/cs-old-equip-2" alt="Hager wheel loader, original photo" loading="lazy"></div>
+        <div class="shot"><img src="https://res.cloudinary.com/dsbllwpbh/image/upload/f_auto,q_auto,c_fill,g_auto,ar_4:3,w_500/bhsfootball26/bhsfootball26/cs-old-equip-3" alt="Hager dozer, original photo" loading="lazy"></div>
+        <div class="shot"><img src="https://res.cloudinary.com/dsbllwpbh/image/upload/f_auto,q_auto,c_fill,g_auto,ar_4:3,w_500/bhsfootball26/bhsfootball26/cs-old-equip-4" alt="Hager excavator digging, original photo" loading="lazy"></div>
+      </div>
+
+      <div class="gallery-label"><span class="dot dot--after"></span>After — rebuilt cinematic brand photography</div>
+      <div class="grid-3">
+        <div class="shot shot--after"><img src="https://res.cloudinary.com/dsbllwpbh/image/upload/f_auto,q_auto,c_fill,g_auto,ar_4:3,w_700/bhsfootball26/bhsfootball26/hager-hero" alt="Rebuilt cinematic Hager excavator" loading="lazy"></div>
+        <div class="shot shot--after"><img src="https://res.cloudinary.com/dsbllwpbh/image/upload/f_auto,q_auto,c_fill,g_auto,ar_4:3,w_700/bhsfootball26/bhsfootball26/hager-loader" alt="Rebuilt cinematic Hager wheel loader" loading="lazy"></div>
+        <div class="shot shot--after"><img src="https://res.cloudinary.com/dsbllwpbh/image/upload/f_auto,q_auto,c_fill,g_auto,ar_4:3,w_700/bhsfootball26/bhsfootball26/hager-dozer" alt="Rebuilt cinematic Hager dozer" loading="lazy"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--gold-bright)">The Bulldog Audience Builder</p>
+      <h2>Want this for your business?</h2>
+      <p>Every Audience Builder partner gets the full treatment — built, hosted, and posted around town for a year, wrapped into the most-watched team in Batavia.</p>
+      <div class="cta__includes">
+        <span>Premium Ad</span><span>25 Printed Copies</span><span>Custom Landing Page</span>
+        <span>Rebuilt Photography</span><span>Print-to-Web QR</span><span>Hosted 1 Year</span>
+      </div>
+      <div class="cta__btns">
+        <a class="btn btn--gold" href="../../index.html#sponsorship">Become an Audience Builder</a>
+        <a class="btn btn--ghost" href="../../hager/index.html" target="_blank">See the live example &rarr;</a>
+      </div>
+      <div class="cta__price">$2,500 · One season</div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <span>© 2026 Batavia Bulldogs Football · Bulldog Audience Builder</span>
+      <span>Case study: <a href="../../hager/index.html" target="_blank">Hager Excavating</a></span>
+    </div>
+  </footer>
+
+  <script>
+    const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
