@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hager Excavating — Story of the Season Full-Page Ad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;1,500&family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#221F1C;
+    --ink-2:#2E2A26;
+    --cream:#ECE3D3;
+    --paper:#F2ECDE;
+    --red:#C0322B;
+    --red-deep:#9C2620;
+    --line:rgba(34,31,28,.16);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{height:100%;}
+  body{
+    background:#6f6a64;
+    background-image:radial-gradient(circle at 50% 0%, #807a72, #5a554f 70%);
+    font-family:'Barlow',sans-serif;
+    color:var(--ink);
+    display:flex;align-items:center;justify-content:center;
+    padding:32px 16px;min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ---- 8.5 x 11 page ---- */
+  .ad{
+    position:relative;
+    width:min(94vw,860px);
+    aspect-ratio:85/110;
+    background:var(--paper);
+    box-shadow:0 40px 90px -30px rgba(0,0,0,.65), 0 8px 24px rgba(0,0,0,.35);
+    overflow:hidden;
+    display:flex;flex-direction:column;
+    container-type:inline-size;
+  }
+  /* subtle paper grain */
+  .ad::after{
+    content:"";position:absolute;inset:0;pointer-events:none;z-index:6;
+    background-image:
+      radial-gradient(rgba(0,0,0,.025) 1px, transparent 1px);
+    background-size:3px 3px;mix-blend-mode:multiply;opacity:.5;
+  }
+
+  /* ---- HERO ---- */
+  .ad__hero{
+    position:relative;height:36%;flex:none;overflow:hidden;background:#1d2733;
+  }
+  .ad__hero img{
+    width:100%;height:100%;object-fit:cover;display:block;
+    filter:saturate(1.04) contrast(1.02);
+  }
+  /* top vignette for eyebrow + bottom blend into paper */
+  .ad__hero::before{
+    content:"";position:absolute;inset:0;z-index:2;
+    background:
+      linear-gradient(180deg, rgba(13,16,20,.78) 0%, rgba(13,16,20,.12) 22%, rgba(13,16,20,0) 34%),
+      linear-gradient(0deg, rgba(242,236,222,1) 1px, rgba(242,236,222,0) 12%);
+  }
+  .eyebrow{
+    position:absolute;top:0;left:0;right:0;z-index:3;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:4.4cqw 5cqw;
+    font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;
+    text-transform:uppercase;color:#F4EEE2;
+    font-size:2.5cqw;letter-spacing:.42em;
+  }
+  .eyebrow b{color:var(--red);letter-spacing:.42em;}
+  .eyebrow span:last-child{letter-spacing:.32em;}
+
+  /* red seam rule */
+  .seam{
+    height:.9cqw;background:var(--red);position:relative;z-index:4;flex:none;
+    box-shadow:0 -2px 10px rgba(0,0,0,.18);
+  }
+
+  /* ---- BODY ---- */
+  .ad__body{
+    position:relative;z-index:3;flex:1;min-height:0;
+    padding:4.4cqw 5.6cqw 0;
+    display:flex;flex-direction:column;
+  }
+
+  .headrow{display:flex;gap:4cqw;align-items:flex-start;justify-content:space-between;}
+  .head{flex:1;min-width:0;}
+  .kicker{
+    font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;
+    text-transform:uppercase;letter-spacing:.34em;color:var(--red);
+    font-size:2.5cqw;margin-bottom:1.6cqw;
+  }
+  h1{
+    font-family:'Oswald',sans-serif;font-weight:700;
+    text-transform:uppercase;line-height:.96;letter-spacing:.002em;
+    font-size:7.4cqw;color:var(--ink);white-space:nowrap;
+  }
+  h1 .red{color:var(--red);}
+  .sub{
+    margin-top:2.2cqw;max-width:64cqw;
+    font-size:2.95cqw;line-height:1.3;color:#4a443d;font-weight:500;
+  }
+  .sub em{font-style:italic;color:var(--ink);}
+
+  .badge{flex:none;width:24cqw;height:auto;margin-top:.4cqw;
+    filter:drop-shadow(0 6px 14px rgba(0,0,0,.28));}
+
+  /* manifesto */
+  .manifesto{
+    margin-top:3.4cqw;display:flex;gap:4cqw;align-items:flex-start;
+  }
+  .manifesto .bar{flex:none;width:.85cqw;align-self:stretch;background:var(--red);border-radius:2px;}
+  .manifesto p{font-size:2.95cqw;line-height:1.5;color:#3c3731;max-width:78cqw;}
+  .manifesto strong{font-weight:600;color:var(--ink);}
+
+  /* services */
+  .svc{margin-top:3cqw;padding-top:3.4cqw;padding-bottom:1.5cqw;border-top:1px solid var(--line);}
+  .svc__label{
+    font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;
+    text-transform:uppercase;letter-spacing:.3em;font-size:2.3cqw;color:#8a8278;
+    margin-bottom:2.2cqw;
+  }
+  .svc__list{display:flex;flex-wrap:wrap;gap:1.4cqw 0;align-items:center;
+    font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;
+    font-size:2.78cqw;letter-spacing:.03em;color:var(--ink);line-height:1;}
+  .svc__list li{list-style:none;display:flex;align-items:center;}
+  .svc__list li:not(:last-child)::after{
+    content:"";width:.7cqw;height:.7cqw;border-radius:50%;
+    background:var(--red);margin:0 2.4cqw;display:inline-block;
+  }
+
+  /* footer contact bar */
+  .foot{
+    background:var(--ink);color:#E9E2D6;flex:none;
+    display:flex;align-items:center;justify-content:space-between;gap:2.2cqw;
+    padding:3.4cqw 4.6cqw;position:relative;z-index:3;
+  }
+  .foot::before{content:"";position:absolute;top:0;left:0;right:0;height:.55cqw;background:var(--red);}
+  .foot__area{
+    font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;
+    text-transform:uppercase;letter-spacing:.1em;font-size:2.2cqw;line-height:1.35;
+    color:#cfc7b9;max-width:21cqw;
+  }
+  .foot__area b{color:#fff;display:block;letter-spacing:.2em;font-size:1.95cqw;color:var(--red);margin-bottom:.7cqw;}
+  .foot__contact{text-align:right;display:flex;flex-direction:column;gap:.7cqw;}
+  .foot__phone{font-family:'Oswald',sans-serif;font-weight:700;font-size:4.4cqw;white-space:nowrap;
+    color:#fff;letter-spacing:.005em;line-height:1;}
+  .foot__meta{font-size:2.15cqw;color:#bdb5a7;letter-spacing:.02em;}
+  .foot__meta b{color:var(--red);font-weight:600;}
+  /* QR */
+  .foot__qr{display:flex;align-items:center;gap:1.6cqw;flex:none;}
+  .qr-cap{text-align:right;}
+  .qr-cap b{display:block;font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;
+    color:#fff;font-size:2.3cqw;line-height:1.05;letter-spacing:.02em;}
+  .qr-cap span{display:block;margin-top:.6cqw;font-family:'Barlow Semi Condensed',sans-serif;
+    font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--red);font-size:1.7cqw;line-height:1.2;}
+  .qr-box{width:13.5cqw;height:13.5cqw;background:#fff;border-radius:1.4cqw;padding:1cqw;flex:none;
+    box-shadow:0 4px 14px rgba(0,0,0,.35);}
+  .qr-box img{width:100%;height:100%;display:block;}
+</style>
+</head>
+<body>
+  <div class="ad">
+
+    <div class="ad__hero">
+      <div class="eyebrow">
+        <span>Hager <b>Excavating</b></span>
+        <span>Est. 1946 · West Chicago, IL</span>
+      </div>
+      <img src="https://res.cloudinary.com/dsbllwpbh/image/upload/f_auto,q_auto,w_1700/bhsfootball26/bhsfootball26/hager-hero" alt="Hager Caterpillar excavator digging a residential foundation at golden hour">
+    </div>
+    <div class="seam"></div>
+
+    <div class="ad__body">
+      <div class="headrow">
+        <div class="head">
+          <div class="kicker">Three Generations Deep</div>
+          <h1>We Break Ground.<br><span class="red">You Build On It.</span></h1>
+          <p class="sub">Family-owned excavation &amp; site work, moving Chicagoland&rsquo;s ground since 1946 &mdash; <em>solid ground, on schedule, done right.</em></p>
+        </div>
+        <img class="badge" src="https://res.cloudinary.com/dsbllwpbh/image/upload/bhsfootball26/bhsfootball26/hager-badge-svg.svg" alt="Hager Excavating badge, since 1946">
+      </div>
+
+      <div class="svc">
+        <div class="svc__label">What We Move</div>
+        <ul class="svc__list">
+          <li>Foundations</li>
+          <li>Site Development</li>
+          <li>Roadways</li>
+          <li>Parking Lots</li>
+          <li>Commercial</li>
+          <li>Snow Removal</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot">
+      <div class="foot__area">
+        <b>Serving Chicagoland</b>
+        DuPage · Kane · Cook · Lake · Will · McHenry
+      </div>
+      <div class="foot__qr">
+        <div class="qr-cap">
+          <b>See Our<br>Story</b>
+          <span>bataviabulldogs<br>football.org/hager</span>
+        </div>
+        <div class="qr-box"><img src="https://res.cloudinary.com/dsbllwpbh/image/upload/bhsfootball26/bhsfootball26/hager-qr.svg" alt="Scan to visit bataviabulldogsfootball.org/hager"></div>
+      </div>
+      <div class="foot__contact">
+        <div class="foot__phone">(630) 231-3225</div>
+        <div class="foot__meta">180 W Grand Lake Blvd, West Chicago, IL 60185</div>
+        <div class="foot__meta"><b>chagerexcavating.com</b></div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hager Excavating — Family-Owned Excavation in Chicagoland Since 1946</title>
+<meta name="description" content="Hager Excavating: three generations of family-owned excavation and site work across DuPage, Kane, Cook, Lake, Will & McHenry counties. Foundations, site development, roadways, parking lots, commercial & snow removal. Call (630) 231-3225.">
+<link rel="icon" href="https://res.cloudinary.com/dsbllwpbh/image/upload/bhsfootball26/bhsfootball26/hager-badge-svg.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#211D1A; --ink-2:#2C2723; --ink-3:#3A332E;
+  --cream:#ECE3D3; --paper:#F4EEE2; --paper-2:#EAE1D0;
+  --red:#C0322B; --red-deep:#9C2620; --red-soft:#D8453C;
+  --muted:#6C645B; --line:rgba(33,29,26,.14);
+  --gold:#E7B83A;
+  --shadow:0 24px 60px -24px rgba(20,15,10,.55);
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Barlow',system-ui,sans-serif;color:var(--ink);background:var(--paper);
+  -webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+.wrap{width:min(92vw,var(--maxw));margin-inline:auto;}
+.eyebrow{font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+  letter-spacing:.28em;font-size:.82rem;color:var(--red);}
+h2.section-title{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;
+  font-size:clamp(2rem,4.6vw,3.2rem);line-height:1;letter-spacing:.01em;color:var(--ink);}
+.lead{font-size:clamp(1.05rem,1.6vw,1.25rem);color:var(--muted);max-width:60ch;}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:.55em;font-family:'Oswald',sans-serif;font-weight:600;
+  text-transform:uppercase;letter-spacing:.06em;font-size:.98rem;padding:.92em 1.5em;border-radius:4px;
+  transition:transform .18s ease,box-shadow .18s ease,background .18s ease;cursor:pointer;border:0;line-height:1;}
+.btn--red{background:var(--red);color:#fff;box-shadow:0 10px 24px -10px rgba(192,50,43,.8);}
+.btn--red:hover{background:var(--red-deep);transform:translateY(-2px);}
+.btn--ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55);}
+.btn--ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);transform:translateY(-2px);}
+.btn--ink{background:var(--ink);color:#fff;}
+.btn--ink:hover{background:#000;transform:translateY(-2px);}
+.btn svg{width:18px;height:18px;}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,box-shadow .3s,padding .3s;
+  padding:18px 0;}
+.nav__inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;}
+.brand{display:flex;align-items:center;gap:.7rem;}
+.brand img{width:115px;height:115px;filter:drop-shadow(0 3px 9px rgba(0,0,0,.5));
+  transition:width .3s ease,height .3s ease;}
+.nav.scrolled .brand img{width:50px;height:50px;}
+.brand__txt{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.04em;
+  color:#fff;line-height:1;font-size:1.18rem;transition:color .3s;}
+.brand__txt span{display:block;font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:.62rem;
+  letter-spacing:.34em;color:var(--gold);margin-top:3px;}
+.nav__links{display:flex;align-items:center;gap:2rem;}
+.nav__links a{font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+  letter-spacing:.14em;font-size:.82rem;color:rgba(255,255,255,.86);transition:color .2s;}
+.nav__links a:hover{color:#fff;}
+.nav__phone{display:inline-flex;align-items:center;gap:.5rem;}
+.nav.scrolled{background:var(--ink);box-shadow:0 6px 24px rgba(0,0,0,.3);padding:11px 0;}
+@media(max-width:880px){.nav__links a:not(.btn){display:none;}.brand__txt{font-size:1rem;}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;color:#fff;
+  padding:178px 0 70px;overflow:hidden;}
+.hero__bg{position:absolute;inset:0;z-index:0;}
+.hero__bg img{width:100%;height:100%;object-fit:cover;}
+.hero__bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(15,12,10,.92) 0%,rgba(15,12,10,.6) 42%,rgba(15,12,10,.15) 75%,rgba(15,12,10,.35) 100%),
+             linear-gradient(0deg,rgba(15,12,10,.7),rgba(15,12,10,0) 40%);}
+.hero__inner{position:relative;z-index:2;max-width:680px;}
+.hero .eyebrow{color:var(--gold);letter-spacing:.34em;}
+.hero h1{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;
+  font-size:clamp(2.7rem,7vw,5.2rem);line-height:.92;letter-spacing:.005em;margin:.5rem 0 0;
+  text-shadow:0 4px 24px rgba(0,0,0,.4);}
+.hero h1 .red{color:var(--red-soft);}
+.hero__sub{font-size:clamp(1.1rem,1.8vw,1.35rem);color:rgba(255,255,255,.9);margin:1.4rem 0 2rem;max-width:50ch;}
+.hero__cta{display:flex;flex-wrap:wrap;gap:1rem;}
+.hero__chips{display:flex;flex-wrap:wrap;gap:1.6rem;margin-top:2.6rem;padding-top:2rem;
+  border-top:1px solid rgba(255,255,255,.2);}
+.chip{display:flex;align-items:center;gap:.6rem;font-family:'Barlow Semi Condensed',sans-serif;
+  font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.92rem;color:rgba(255,255,255,.92);}
+.chip svg{width:22px;height:22px;color:var(--gold);}
+
+/* ---------- stats band ---------- */
+.stats{background:var(--ink);color:#fff;padding:0;}
+.stats__grid{display:grid;grid-template-columns:repeat(4,1fr);}
+.stat{padding:2.6rem 1.4rem;text-align:center;border-right:1px solid rgba(255,255,255,.1);}
+.stat:last-child{border-right:0;}
+.stat__num{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(2.2rem,4vw,3.1rem);
+  line-height:1;color:#fff;}
+.stat__num .u{color:var(--red-soft);}
+.stat__lbl{font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+  letter-spacing:.16em;font-size:.78rem;color:rgba(255,255,255,.62);margin-top:.6rem;}
+@media(max-width:760px){.stats__grid{grid-template-columns:repeat(2,1fr);}
+  .stat:nth-child(2){border-right:0;}.stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid rgba(255,255,255,.1);}}
+
+/* ---------- services ---------- */
+.section{padding:clamp(4.5rem,8vw,7rem) 0;}
+.section__head{text-align:center;max-width:680px;margin:0 auto clamp(2.5rem,5vw,3.5rem);}
+.section__head .lead{margin:1rem auto 0;}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
+@media(max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.svc-grid{grid-template-columns:1fr;}}
+.svc-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:2.1rem 1.9rem;
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s;position:relative;overflow:hidden;}
+.svc-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red);
+  transform:scaleY(0);transform-origin:top;transition:transform .25s ease;}
+.svc-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:transparent;}
+.svc-card:hover::before{transform:scaleY(1);}
+.svc-ico{width:54px;height:54px;border-radius:9px;background:rgba(192,50,43,.1);color:var(--red);
+  display:grid;place-items:center;margin-bottom:1.2rem;}
+.svc-ico svg{width:28px;height:28px;}
+.svc-card h3{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;font-size:1.28rem;
+  letter-spacing:.02em;margin-bottom:.5rem;}
+.svc-card p{color:var(--muted);font-size:1rem;}
+
+/* ---------- story ---------- */
+.story{background:var(--paper-2);}
+.story__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;}
+@media(max-width:860px){.story__grid{grid-template-columns:1fr;}}
+.story__media{position:relative;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);}
+.story__media img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
+.story h2{margin:.6rem 0 1.2rem;}
+.story p{color:#4a443d;margin-bottom:1.1rem;max-width:54ch;}
+.story p strong{color:var(--ink);}
+.story__sign{font-family:'Barlow',cursive;font-style:italic;font-weight:600;color:var(--red);margin-top:1.4rem;font-size:1.1rem;}
+
+/* ---------- why band ---------- */
+.why{position:relative;color:#fff;padding:clamp(4.5rem,8vw,7rem) 0;overflow:hidden;}
+.why__bg{position:absolute;inset:0;z-index:0;}
+.why__bg img{width:100%;height:100%;object-fit:cover;}
+.why__bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(12,10,8,.94) 0%,rgba(12,10,8,.7) 50%,rgba(12,10,8,.4) 100%);}
+.why__inner{position:relative;z-index:2;max-width:640px;}
+.why h2{color:#fff;margin:.6rem 0 2rem;}
+.why__list{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem 2rem;}
+@media(max-width:560px){.why__list{grid-template-columns:1fr;}}
+.why__item{display:flex;gap:.9rem;align-items:flex-start;}
+.why__item svg{width:26px;height:26px;color:var(--gold);flex:none;margin-top:2px;}
+.why__item b{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;font-size:1.05rem;
+  letter-spacing:.02em;display:block;}
+.why__item span{color:rgba(255,255,255,.78);font-size:.96rem;}
+
+/* ---------- process ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;counter-reset:step;}
+@media(max-width:820px){.steps{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.steps{grid-template-columns:1fr;}}
+.step{position:relative;padding:2rem 1.5rem;background:#fff;border:1px solid var(--line);border-radius:10px;}
+.step__n{font-family:'Oswald',sans-serif;font-weight:700;font-size:2.4rem;color:var(--red);line-height:1;
+  -webkit-text-stroke:0;opacity:.95;}
+.step h4{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;font-size:1.18rem;margin:.5rem 0 .4rem;}
+.step p{color:var(--muted);font-size:.96rem;}
+
+/* ---------- service area ---------- */
+.area{background:var(--ink);color:#fff;}
+.area__grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;margin-top:2.5rem;}
+@media(max-width:760px){.area__grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:420px){.area__grid{grid-template-columns:repeat(2,1fr);}}
+.county{background:var(--ink-2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:1.5rem .8rem;
+  text-align:center;transition:transform .2s,border-color .2s;}
+.county:hover{transform:translateY(-4px);border-color:var(--red);}
+.county svg{width:26px;height:26px;color:var(--red-soft);margin-bottom:.6rem;}
+.county b{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;font-size:1.02rem;display:block;}
+.county span{font-size:.74rem;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase;}
+.area .section__head h2{color:#fff;}
+.area .section__head .lead{color:rgba(255,255,255,.7);}
+
+/* ---------- contact ---------- */
+.contact__grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:start;}
+@media(max-width:860px){.contact__grid{grid-template-columns:1fr;}}
+.contact h2{margin-bottom:1rem;}
+.contact .lead{margin-bottom:2rem;}
+.cinfo{display:flex;flex-direction:column;gap:1.3rem;}
+.cinfo__row{display:flex;gap:1rem;align-items:flex-start;}
+.cinfo__ico{width:46px;height:46px;border-radius:9px;background:var(--ink);color:#fff;display:grid;place-items:center;flex:none;}
+.cinfo__ico svg{width:22px;height:22px;}
+.cinfo__row b{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;font-size:.82rem;
+  letter-spacing:.14em;color:var(--muted);display:block;margin-bottom:.2rem;}
+.cinfo__row .big{font-family:'Oswald',sans-serif;font-size:1.5rem;color:var(--ink);font-weight:600;}
+.cinfo__row a{color:var(--ink);}
+.cform{background:#fff;border:1px solid var(--line);border-radius:14px;padding:clamp(1.6rem,3vw,2.4rem);box-shadow:var(--shadow);}
+.cform h3{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;font-size:1.4rem;margin-bottom:1.2rem;}
+.field{margin-bottom:1rem;}
+.field label{font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+  letter-spacing:.1em;font-size:.74rem;color:var(--muted);display:block;margin-bottom:.35rem;}
+.field input,.field select,.field textarea{width:100%;font-family:'Barlow',sans-serif;font-size:1rem;
+  padding:.8em .9em;border:1.5px solid var(--line);border-radius:7px;background:var(--paper);color:var(--ink);
+  transition:border-color .2s,box-shadow .2s;}
+.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--red);
+  box-shadow:0 0 0 3px rgba(192,50,43,.14);}
+.cform .btn{width:100%;justify-content:center;margin-top:.4rem;font-size:1.05rem;}
+.hp{position:absolute;left:-9999px;}
+
+/* ---------- footer ---------- */
+.foot{background:#171310;color:rgba(255,255,255,.7);padding:3.5rem 0 2rem;}
+.foot__top{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;align-items:center;
+  padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.1);}
+.foot__brand{display:flex;align-items:center;gap:1rem;}
+.foot__brand img{width:64px;height:64px;}
+.foot__brand b{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;color:#fff;
+  font-size:1.3rem;line-height:1.1;display:block;}
+.foot__brand span{font-size:.85rem;}
+.sponsor{display:flex;align-items:center;gap:.8rem;background:rgba(192,50,43,.12);
+  border:1px solid rgba(231,184,58,.35);border-radius:10px;padding:.9rem 1.3rem;}
+.sponsor svg{width:30px;height:30px;color:var(--gold);flex:none;}
+.sponsor b{color:#fff;font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+  letter-spacing:.06em;font-size:.92rem;display:block;}
+.sponsor span{font-size:.8rem;}
+.sponsor a{color:var(--gold);text-decoration:underline;}
+.foot__bottom{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;padding-top:1.6rem;font-size:.84rem;}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#top">
+      <img src="https://res.cloudinary.com/dsbllwpbh/image/upload/bhsfootball26/bhsfootball26/hager-logo-nav.svg" alt="Hager Excavating badge">
+      <span class="brand__txt">Hager<span>Excavating · Est. 1946</span></span>
+    </a>
+    <nav class="nav__links">
+      <a href="#services">Services</a>
+      <a href="#story">Our Story</a>
+      <a href="#area">Service Area</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn--red nav__phone" href="tel:+16302313225">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        (630) 231-3225
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero__bg">
+    <img src="https://res.cloudinary.com/dsbllwpbh/image/upload/f_auto,q_auto,w_2000/bhsfootball26/bhsfootball26/hager-hero" alt="Hager Caterpillar excavator digging a residential foundation at golden hour">
+  </div>
+  <div class="wrap hero__inner">
+    <p class="eyebrow">Family-Owned &amp; Operated · Since 1946</p>
+    <h1>We Break Ground.<br><span class="red">You Build On It.</span></h1>
+    <p class="hero__sub">Three generations of Chicagoland excavation &amp; site work — solid ground, on schedule, done right the first time.</p>
+    <div class="hero__cta">
+      <a class="btn btn--red" href="#contact">Get a Free Estimate</a>
+      <a class="btn btn--ghost" href="tel:+16302313225">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        Call (630) 231-3225
+      </a>
+    </div>
+    <div class="hero__chips">
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>3 Generations</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>6 Counties Served</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>Fully Insured</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-2 14h4l-2 6"/></svg>A Yard of Cat Iron</span>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats__grid">
+    <div class="stat"><div class="stat__num"><span class="u">19</span>46</div><div class="stat__lbl">Established</div></div>
+    <div class="stat"><div class="stat__num">3<span class="u">×</span></div><div class="stat__lbl">Generations</div></div>
+    <div class="stat"><div class="stat__num">6</div><div class="stat__lbl">Counties Served</div></div>
+    <div class="stat"><div class="stat__num">1000<span class="u">s</span></div><div class="stat__lbl">Foundations Dug</div></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <p class="eyebrow">What We Move</p>
+      <h2 class="section-title">Excavation, Start to Finish</h2>
+      <p class="lead">From the first cut to final grade, Hager handles the dirt so you can build with confidence.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3>Foundations</h3>
+        <p>Precision digging and backfill for residential and commercial foundations — square, level, and on grade.</p>
+      </article>
+      <article class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 20V10l8-5 8 5v10"/><path d="M4 14h16"/></svg></div>
+        <h3>Site Development</h3>
+        <p>Clearing, mass grading, and lot prep that turns raw ground into a build-ready site.</p>
+      </article>
+      <article class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19 9 5"/><path d="m20 19-5-14"/><path d="M12 7v2"/><path d="M12 13v2"/><path d="M12 19v0"/></svg></div>
+        <h3>Roadways</h3>
+        <p>Subgrade, base, and gravel work for drives, private roads, and access routes built to last.</p>
+      </article>
+      <article class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/><path d="M3 9h18"/></svg></div>
+        <h3>Parking Lots</h3>
+        <p>Excavation, stone, and grading for durable commercial lots with drainage done right.</p>
+      </article>
+      <article class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l5-4v18"/><path d="M19 21V11l-9-6"/><path d="M9 9v0M9 13v0M9 17v0"/></svg></div>
+        <h3>Commercial</h3>
+        <p>Big-iron capacity for commercial pads, utilities, and large-scale earthwork on schedule.</p>
+      </article>
+      <article class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><path d="m4.9 4.9 14.2 14.2M19.1 4.9 4.9 19.1"/></svg></div>
+        <h3>Snow Removal</h3>
+        <p>Commercial plowing and lot clearing all winter — your business open when the snow flies.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="section story" id="story">
+  <div class="wrap story__grid">
+    <div class="story__media reveal">
+      <img src="https://res.cloudinary.com/dsbllwpbh/image/upload/f_auto,q_auto,w_1100/bhsfootball26/bhsfootball26/hager-loader" alt="Hager Caterpillar wheel loader at golden hour on a graded jobsite">
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Three Generations Deep</p>
+      <h2 class="section-title">A West Chicago Family<br>Built on Solid Ground</h2>
+      <p>Since <strong>1946</strong>, the Hager family has been moving the ground that Chicagoland builds on. What started with a single machine has grown into a full fleet of Caterpillar iron — but the way we work hasn&rsquo;t changed.</p>
+      <p>We&rsquo;re still <strong>family-owned and operated</strong>, still running the jobs ourselves, and still treating every foundation like it&rsquo;s going under our own house. Three generations of operators means decades of dirt under our tracks and a reputation builders trust.</p>
+      <p><strong>One family. One promise:</strong> the ground under your project, handled right the first time.</p>
+      <p class="story__sign">— The Hager Family</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" id="why">
+  <div class="why__bg">
+    <img src="https://res.cloudinary.com/dsbllwpbh/image/upload/f_auto,q_auto,w_2000/bhsfootball26/bhsfootball26/hager-dozer" alt="Hager Caterpillar dozer grading a jobsite at sunset">
+  </div>
+  <div class="wrap why__inner reveal">
+    <p class="eyebrow" style="color:var(--gold)">Why Builders Call Hager</p>
+    <h2 class="section-title">Big Iron. Family Standards.</h2>
+    <div class="why__list">
+      <div class="why__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div><b>On Schedule</b><span>We show up, dig fast, and keep your build on track.</span></div></div>
+      <div class="why__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg><div><b>Owner-Operated</b><span>The people who quote the job are the people who run it.</span></div></div>
+      <div class="why__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg><div><b>Fully Insured</b><span>Licensed, bonded, and insured for residential &amp; commercial.</span></div></div>
+      <div class="why__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-6 0v4"/><rect x="2" y="9" width="20" height="12" rx="2"/></svg><div><b>Free Estimates</b><span>Straight pricing and an honest read on your site — no games.</span></div></div>
+    </div>
+    <div style="margin-top:2.4rem"><a class="btn btn--red" href="#contact">Start Your Project</a></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <p class="eyebrow">How It Works</p>
+      <h2 class="section-title">From Call to Final Grade</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="step__n">01</div><h4>Call Us</h4><p>Tell us about your site and timeline. We pick up — and we know the ground around here.</p></div>
+      <div class="step reveal"><div class="step__n">02</div><h4>Free Estimate</h4><p>We walk the site, read the dirt, and give you straight, itemized pricing.</p></div>
+      <div class="step reveal"><div class="step__n">03</div><h4>We Dig</h4><p>Our crew and Cat fleet move in and get it done clean, safe, and on schedule.</p></div>
+      <div class="step reveal"><div class="step__n">04</div><h4>You Build</h4><p>You take over solid, build-ready ground — graded right the first time.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="section area" id="area">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <p class="eyebrow">Serving Chicagoland</p>
+      <h2 class="section-title">Six Counties, One Crew</h2>
+      <p class="lead">Based in West Chicago and working across the Chicagoland collar counties and surrounding areas.</p>
+    </div>
+    <div class="area__grid">
+      <div class="county reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg><b>DuPage</b><span>County</span></div>
+      <div class="county reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg><b>Kane</b><span>County</span></div>
+      <div class="county reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg><b>Cook</b><span>County</span></div>
+      <div class="county reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg><b>Lake</b><span>County</span></div>
+      <div class="county reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg><b>Will</b><span>County</span></div>
+      <div class="county reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg><b>McHenry</b><span>County</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="wrap contact__grid">
+    <div class="reveal">
+      <p class="eyebrow">Let&rsquo;s Break Ground</p>
+      <h2 class="section-title">Get a Free Estimate</h2>
+      <p class="lead">Tell us about your project and we&rsquo;ll get right back to you. Prefer to talk? Call the yard — a Hager answers.</p>
+      <div class="cinfo">
+        <div class="cinfo__row">
+          <span class="cinfo__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+          <div><b>Call the Yard</b><a class="big" href="tel:+16302313225">(630) 231-3225</a></div>
+        </div>
+        <div class="cinfo__row">
+          <span class="cinfo__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div><b>Visit / Mail</b><div>180 W Grand Lake Blvd<br>West Chicago, IL 60185</div></div>
+        </div>
+        <div class="cinfo__row">
+          <span class="cinfo__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+          <div><b>Hours</b><div>Mon–Fri 7:00a–5:00p · Snow service 24/7</div></div>
+        </div>
+      </div>
+    </div>
+    <form class="cform reveal" name="hager-estimate" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="hager-estimate">
+      <p class="hp"><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
+      <h3>Request Your Estimate</h3>
+      <div class="field"><label for="n">Name</label><input id="n" name="name" required placeholder="Your name"></div>
+      <div class="field"><label for="p">Phone</label><input id="p" name="phone" type="tel" required placeholder="(630) 000-0000"></div>
+      <div class="field"><label for="t">Project Type</label>
+        <select id="t" name="project">
+          <option>Foundation</option><option>Site Development</option><option>Roadway / Driveway</option>
+          <option>Parking Lot</option><option>Commercial Earthwork</option><option>Snow Removal</option><option>Other</option>
+        </select>
+      </div>
+      <div class="field"><label for="m">Tell us about the job</label><textarea id="m" name="message" rows="4" placeholder="Location, timeline, scope…"></textarea></div>
+      <button class="btn btn--red" type="submit">Send Request</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div class="foot__brand">
+        <img src="https://res.cloudinary.com/dsbllwpbh/image/upload/bhsfootball26/bhsfootball26/hager-logo-nav.svg" alt="Hager Excavating badge">
+        <div><b>Hager Excavating</b><span>Family-owned in West Chicago since 1946</span></div>
+      </div>
+      <div class="sponsor">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        <div><b>Proud Sponsor</b><span>Batavia Bulldogs Football · <a href="https://bataviabulldogsfootball.org" target="_blank" rel="noopener">Bulldog Legacy</a></span></div>
+      </div>
+    </div>
+    <div class="foot__bottom">
+      <span>© 2026 CH Hager Excavating, Inc. · 180 W Grand Lake Blvd, West Chicago, IL 60185 · (630) 231-3225</span>
+      <span>Serving DuPage · Kane · Cook · Lake · Will · McHenry</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // nav background on scroll
+  const nav=document.getElementById('nav');
+  const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>40);
+  onScroll();addEventListener('scroll',onScroll,{passive:true});
+  // reveal on view
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

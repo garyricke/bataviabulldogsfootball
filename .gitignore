@@ -1,0 +1,35 @@
+# secrets / environment
+.env
+.env.*
+*.env
+.cloudinary/
+
+# OS / editor
+.DS_Store
+**/.DS_Store
+.vscode/
+.idea/
+
+# node
+node_modules/
+
+# video & source email files (video hosted on Cloudinary)
+*.mp4
+*.mov
+*.eml
+
+# generated & working raster images — all hosted on Cloudinary
+generated_imgs/
+assets/*.png
+assets/*.jpg
+assets/*.jpeg
+assets/*.webp
+assets/360-*.jpg
+assets/0-sot/*.png
+assets/0-sot/*.jpg
+assets/0-sot/*.jpeg
+assets/0-sot/*.webp
+assets/0-sot/hager/*.png
+assets/0-sot/hager/*.jpg
+assets/0-sot/hager/*.jpeg
+assets/0-sot/hager/*.webp
